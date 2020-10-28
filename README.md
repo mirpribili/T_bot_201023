@@ -44,7 +44,7 @@
 - pip uninstall loader
 - pip list
 
-<img src="img\telegram_kurs.png"> 
+<img src=".help\img\telegram_kurs.png"> 
 
 ## 11. Практика
 ### написание запросов
@@ -108,7 +108,7 @@
 - ctrl + / = commented strings
 - ctrl + "-" or "=" = (-:
 
-<img src="img\причины.png"> 
+<img src=".help\img\причины.png"> 
 
 
 
