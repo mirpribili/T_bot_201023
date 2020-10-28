@@ -36,9 +36,11 @@
 - **conda deactivate;cd $HOME/enviroments;source T_bot_201028_env/bin/activate;cd $HOME/T_bot_201023**
 - python --version
 - **git branch**
-git branch fix_error
-git checkout fix_error
-
+- **git branch 201028_template**
+- **git checkout 201028_template**
+- **git checkout master**
+- **git branch -d 201028_template**
+- **git checkout -b 201028_template**
 
 <img src="img\telegram_kurs.png"> 
 
