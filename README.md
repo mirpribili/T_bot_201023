@@ -14,10 +14,33 @@
 - git clone https://github.com/mirpribili/T_bot_201023.git
 - cd $HOME/T_bot_201023
 - git remote set-url origin git@github.com:mirpribili/T_bot_201023.git
-- **conda deactivate;cd $HOME/enviroments;source T_bot_201023_env/bin/activate;cd $HOME/T_bot_201023**
+- *conda deactivate;cd $HOME/enviroments;source T_bot_201023_env/bin/activate;cd $HOME/T_bot_201023*
 - **git add .;git commit -m "add readme";git push origin**
+- **pip freeze > requirements.txt**
+- git clone https://github.com/Latand/udemy_course.git
+- cd $HOME/T_bot_201023;sudo apt-get install python3.8
+- python3.8 --version
+- nano ~/.bashrc
+- - add string
+- - - alias python3=python3.8
+- python3 -m venv --upgrade $HOME/enviroments/T_bot_201023_env/
+- deactivate
+- cd $HOME
+- *rmvirtualenv T_bot_201023_env*
+- *python3.8 -m venv T_bot_201028_env*
+- *sudo apt-get install python-virtualenv*
+- sudo apt-get install python3.8-dev python3.8-venv
+- *virtualenv --python=/usr/bin/python3.8 venv*
+- python3.8 --version
+- **python3.8 -m venv T_bot_201028_env**
+- **conda deactivate;cd $HOME/enviroments;source T_bot_201028_env/bin/activate;cd $HOME/T_bot_201023**
+- python --version
+- **git branch**
+git branch fix_error
+git checkout fix_error
 
-<img src="i\I.png"> <img src="img\telegram_kurs.png"> 
+
+<img src="img\telegram_kurs.png"> 
 
 ## 11. Практика
 ### написание запросов
@@ -26,7 +49,7 @@
 
 ### Задание
 - Необходимо отправить нашим ботом в группу с chat_id = -1001359487461 фотографию, которую вы нашли в интернете по ссылке: https://i.pinimg.com/originals/f4/d2/96/f4d2961b652880be432fb9580891ed62.png
-- Token бота = 932722516:AAG2GqrwMxB2xfuEg7hg4Z8p9cOfBKceffs.
+- Token бота = 932722516:AAG2GqrwMxB2xfuEg7hg4Z8p9cOfBKceffs
 - При этом вы хотите сделать подпись к фотке "Ух, ты только посмотри на него!"
 - Сформируйте необходимый запрос и пришлите сюда то, что содержится в поле file_unique_id (уникальный идентификатор этой фотографии).
 - ******* Подсказка ******* 
@@ -81,7 +104,7 @@
 - ctrl + / = commented strings
 - ctrl + "-" or "=" = (-:
 
-<img src="i\I.png"> <img src="img\причины.png"> 
+<img src="img\причины.png"> 
 
 
 
