@@ -41,6 +41,7 @@
 - **git checkout master**
 - **git branch -d 201028_template**
 - **git checkout -b 201028_template**
+- **git push --set-upstream origin 201028_template**
 - pip uninstall loader
 - pip list
 
@@ -109,6 +110,6 @@
 - ctrl + "-" or "=" = (-:
 
 <img src=".help\img\причины.png"> 
+не знаю что сказать, куча дел я туплю и устал)
 
-
-
+*t*
