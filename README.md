@@ -41,6 +41,8 @@
 - **git checkout master**
 - **git branch -d 201028_template**
 - **git checkout -b 201028_template**
+- pip uninstall loader
+- pip list
 
 <img src="img\telegram_kurs.png"> 
 
