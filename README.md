@@ -44,6 +44,8 @@
 - **git push --set-upstream origin 201028_template**
 - pip uninstall loader
 - pip list
+- **git add .;git commit -m "test";git push**
+
 
 <img src=".help\img\telegram_kurs.png"> 
 
