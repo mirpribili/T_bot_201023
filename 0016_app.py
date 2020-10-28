@@ -20,8 +20,8 @@ async def get_message_then_send(message: types.Message):
 
     # задание 1
     # - Необходимо отправить нашим ботом в группу с chat_id = -1001359487461 фотографию, которую вы нашли в интернете по ссылке: https://i.pinimg.com/originals/f4/d2/96/f4d2961b652880be432fb9580891ed62.png
-    result_send_message = await bot.send_photo(chat_id=chat_id,
-                                               photo="https://i.pinimg.com/originals/f4/d2/96/f4d2961b652880be432fb9580891ed62.png")
+    # result_send_message = await bot.send_photo(chat_id=chat_id,
+    #                                            photo="https://i.pinimg.com/originals/f4/d2/96/f4d2961b652880be432fb9580891ed62.png")
     print(result_send_message.photo[-1].file_unique_id)
     # задание 2
     # У вас есть чат-группа с chat_id = -1001359487461, где находится ваш бот-админ. Вы хотите этим ботом установить новое название чата "Моя мини-супер группа" (или придумайте своё). Сделайте это с помощью запроса через API.

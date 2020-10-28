@@ -15,7 +15,7 @@
 - cd $HOME/T_bot_201023
 - git remote set-url origin git@github.com:mirpribili/T_bot_201023.git
 - *conda deactivate;cd $HOME/enviroments;source T_bot_201023_env/bin/activate;cd $HOME/T_bot_201023*
-- **git add .;git commit -m "add readme";git push origin**
+- **git add .;git commit -m "add git simple project";git push origin**
 - **pip freeze > requirements.txt**
 - git clone https://github.com/Latand/udemy_course.git
 - cd $HOME/T_bot_201023;sudo apt-get install python3.8
