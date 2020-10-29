@@ -43,6 +43,7 @@
 - **git checkout -b 201028_template**
 - pip uninstall loader
 - pip list
+- **git push origin 201029_hendlers_filters**
 
 <img src=".help\img\telegram_kurs.png"> 
 
