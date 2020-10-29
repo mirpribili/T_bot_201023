@@ -8,23 +8,25 @@
 from aiogram import types
 from loader import dp
 
+
 # ПОРЯДОК ИМЕЕТ ЗНАЧЕНИЕ 1й ТОТ ЧТО ВЫШЕ
 
 
 # 1й способ регистрации хендлера
-#dp.register_message_handler(наша ф-я)
+# dp.register_message_handler(наша ф-я)
 
 # 2й способ регистрации хендлера
-@dp.message_handler() # по умолчанию чюда летят content_types=types.ContentTypes.TEXT
+# @dp.message_handler() # по умолчанию чюда летят content_types=types.ContentTypes.TEXT
 # Если хотите что то другое ловить то указывайте тип явно типа
 # content_types==types.ContentTypes.PHOTO
 #
 # допустим нужно ловить channel_post тогда
 # @dp.channel_post_handler()
+@dp.message_handler()
 async def bot_echo(message: types.Message):
     # тайп хинт для подсказок))
     # types.Message) а тут можно найти всет ипы объектов доступные в телеграме)
-    #message. ...
+    # message. ...
 
     # Эхо бот)
 
