@@ -4,7 +4,8 @@ from aiogram.dispatcher.filters.builtin import CommandHelp
 from loader import dp
 from utils.misc import rate_limit
 
-
+# Используем тут фильтр на команду /help. rate_limit - миддлварь, который не дает флудить этой командой
+# (выполнение раз в 5 секунд)
 @rate_limit(5, 'help')
 @dp.message_handler(CommandHelp())
 async def bot_help(message: types.Message):
@@ -13,4 +14,4 @@ async def bot_help(message: types.Message):
         '/start - Начать диалог',
         '/help - Получить справку'
     ]
-    await message.answer('\n'.join(text))
+    await message.answer('\n'.join(text)) # формируем многострочное сообщение
