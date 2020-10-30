@@ -111,5 +111,13 @@
 
 <img src=".help\img\причины.png"> 
 
-
+### 25 - тест машина состояний
+#### Вопрос 1:
+- Если вы задали пользователю состояние таким образом...
+- - await MyGroup.SuperState.set()
+- Дальше пользователь вводит какой-то текст и вы ловите его. Как вы будете ловить его в хендлере?
+- [ ] @dp.message_handler(state="SuperState")
+- [ ] @dp.message_handler(state="MyGroup.SuperState") 
+- [ ] @dp.callback_query_handler(state=MyGroup.SuperState)
+- [ ] @dp.message_handler(state=MyGroup.SuperState)
 
