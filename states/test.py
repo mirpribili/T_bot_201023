@@ -9,5 +9,5 @@ from aiogram.dispatcher.filters.state import StatesGroup, State
 class Test(StatesGroup):
     # Создаем состояние в этой группе. Называйте каждое состояние соответственно его назначению.
     # В данном случае Q1 - question 1, то есть первый вопрос. У вас это может быть по-другому
-    Q1 = State()
+    Q1 = State() # необычные фильтры
     Q2 = State()
