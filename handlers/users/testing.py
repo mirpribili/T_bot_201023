@@ -1,4 +1,3 @@
-
 from aiogram import types
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters import Command
@@ -6,22 +5,26 @@ from aiogram.dispatcher.filters import Command
 from loader import dp
 from states.test import Test
 
+#Если вы задали пользователю состояние таким образом...
+#await MyGroup.SuperState.set()
+#Дальше пользователь вводит какой-то текст и вы ловите его. Как вы будете ловить его в хендлере?
+#@dp.message_handler(state=MyGroup.SuperState)
 
-#Кроме группы состояний можно использовать строковые значения\
+
+
+# Кроме группы состояний можно использовать строковые значения\
 
 @dp.message_handler(state="enter_email")
 async def answer_q2(message: types.Message, state: FSMContext):
     await message.answer("OK")
-    #await state.reset_data()
+    # await state.reset_data()
     await state.finish()
+
 
 @dp.message_handler(state="please_email")
 async def answer_q2(message: types.Message, state: FSMContext):
     await message.answer("ВВедите Ваш почтовый:")
     await state.set_state("enter_email")
-
-
-
 
 
 # Сделаем фильтр на комманду text="/test", где не будет указано никакого состояния
@@ -72,7 +75,7 @@ async def answer_q1(message: types.Message, state: FSMContext):
 
     # await Test.next() / previous()
     # способ 2
-    #await Test.Q2.set()
+    # await Test.Q2.set()
     await Test.Q2.set()
 
 
@@ -80,6 +83,8 @@ async def answer_q1(message: types.Message, state: FSMContext):
 async def answer_q2(message: types.Message, state: FSMContext):
     # Достаем переменные из машины  состояний
     data = await state.get_data()
+    temp = (await state.get_data()).get("answer1")
+    #Как выгрузить сохраненные данные (какие-то данные "user") из машины состояний?
     answer1 = data.get("answer1")
     answer2 = message.text
 
@@ -94,18 +99,9 @@ async def answer_q2(message: types.Message, state: FSMContext):
     # Вариант 1
     # await state.finish()
 
-
     # Вариант завершения 2
     # await state.reset_state()
 
     # Вариант завершения 3 - без стирания данных в data
     # await state.reset_state(with_data=False)
-    #await state.reset_data()
-
-
-
-
-
-
-
-
+    # await state.reset_data()

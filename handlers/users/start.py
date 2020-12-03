@@ -17,6 +17,9 @@ from re import compile  # регулярки
 from aiogram.utils.deep_linking import get_start_link
 
 
+from loader import dp, bot
+import logging
+
 # Этот хендлер используется для диплинков в личной переписке:
 # Когда пользователь переходит по ссылке http://t.me/username_bot?start=123
 # Тогда по нажатию на кнопку start - боту приходит команда старт с аргументом 123
@@ -56,3 +59,31 @@ async def bot_start(message: types.Message):
                          f'Вы находитесь в личной переписке. \n'
                          f'В вашей команде нет диплинка.\n'
                          f'Ваша диплинк ссылка - {deep_link}')
+
+@dp.message_handler(CommandStart())
+async def bot_start(message: types.Message):
+    non_existing_user = 666666
+
+    # Не попадает в эррор хендер, обрабатывается тут с помощью try
+    try:
+        await message.answer("Неправильно закрыт <b>тег<b>")
+    except Exception as err:
+        await message.answer(f"Не попало в эррор хендлер. Ошибка: {err}")
+
+    # Не попадает в эррор хендер
+    try:
+        await bot.send_message(chat_id=non_existing_user, text="Не существующий пользователь")
+    except Exception as err:
+        await message.answer(f"Не попало в эррор хендлер. Ошибка: {err}")
+
+    # Попадает отсюда в эррор хендлер
+    await message.answer("Не существует <kek>тега</kek>")
+    logging.info("Это не выполнится, но бот не упадет.")
+
+    # Все что ниже - не выполнится, но бот не упадет
+
+    await message.answer("...")
+
+
+
+
