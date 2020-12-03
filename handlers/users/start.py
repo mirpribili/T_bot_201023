@@ -20,6 +20,10 @@ from aiogram.utils.deep_linking import get_start_link
 from loader import dp, bot
 import logging
 
+
+
+
+
 # Этот хендлер используется для диплинков в личной переписке:
 # Когда пользователь переходит по ссылке http://t.me/username_bot?start=123
 # Тогда по нажатию на кнопку start - боту приходит команда старт с аргументом 123
@@ -60,6 +64,7 @@ async def bot_start(message: types.Message):
                          f'В вашей команде нет диплинка.\n'
                          f'Ваша диплинк ссылка - {deep_link}')
 
+
 @dp.message_handler(CommandStart())
 async def bot_start(message: types.Message):
     non_existing_user = 666666
@@ -83,7 +88,6 @@ async def bot_start(message: types.Message):
     # Все что ниже - не выполнится, но бот не упадет
 
     await message.answer("...")
-
 
 
 

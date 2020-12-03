@@ -1,3 +1,8 @@
+
+# я не даю пользователю флудить в бота польщователю запросами)
+
+
+
 # import asyncio
 #
 # from aiogram import types, Dispatcher
